@@ -1,0 +1,9 @@
+﻿
+@{
+    ViewBag.Title = "ThankYou";
+}
+
+<h4 class="text-center">ThankYou, your details has been saved</h4>
+
+@Html.ActionLink("Add more parcel" , "ParcelDetails" , new { id = ViewBag.custId})
+@Html.ActionLink("Home Page" , "CustomerDetails" , "Customer")

@@ -1,0 +1,42 @@
+﻿@model AmazingDeliveries.Models.Parcel
+
+@{
+    ViewBag.Title = "ParcelDetails";
+}
+
+<div>
+    <h4 class="text-center">Please enter your parcel details</h4>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(false)
+                <div class="form-group">
+                    <label>Parcel Name:</label>
+                    @Html.TextBoxFor(p => p.Name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(p => p.Name)
+                </div>
+                <div class="form-group">
+                    <label>Weight:</label>
+                    @Html.TextBoxFor(p => p.Weight, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(p => p.Weight)
+                </div>
+                <div class="form-group">
+                    <label>Type:</label>
+                    @Html.TextBoxFor(p => p.Type, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(p => p.Type)
+                </div>
+                <div class="form-group">
+                    <label>Time:</label>
+                    @Html.TextBoxFor(p => p.Time, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(p => p.Time)
+                </div>
+                @Html.HiddenFor(p => p.CustomID)
+                <button type="submit" class="btn btn-primary">Complete</button>
+            }
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+

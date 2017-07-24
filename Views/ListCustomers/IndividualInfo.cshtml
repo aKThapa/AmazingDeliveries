@@ -1,0 +1,13 @@
+﻿@model AmazingDeliveries.Models.Customer
+
+@{
+    ViewBag.Title = "IndividualInfo";
+}
+
+<br /><br />
+<p>Name : @Html.DisplayFor(c => c.Name) @Html.DisplayFor(c => c.Surname)</p>
+<p>Phone : @Html.DisplayFor(c => c.Phone)</p>
+<p>Email : @Html.DisplayFor(c => c.Email)</p>
+
+@Html.ActionLink("Parcels", "ShowParcelsDetails", "Parcel", new { customerID = Model.CustomerID }, null)
+@Html.ActionLink("Back To List", "CustomersList")

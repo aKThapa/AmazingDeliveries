@@ -1,0 +1,16 @@
+﻿@model IEnumerable<AmazingDeliveries.Models.Customer>
+@{
+    ViewBag.Title = "ListCustomers";
+}
+
+<h2>Customer List</h2>
+
+<ul>
+    @foreach (var c in Model)
+    {
+        string name = (String.Format("{0} {1}", c.Name, c.Surname));
+        <li>@Html.ActionLink(@name, "IndividualInfo", new { id = c.CustomerID })</li>
+    }
+</ul>
+
+@Html.ActionLink("Home Page", "CustomerDetails", "Customer")

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<AmazingDeliveries.Models.Parcel>
+
+@{
+    ViewBag.Title = "ShowParcelsDetails";
+}
+
+<br /><br />
+@{int counter = 1; }
+@foreach (var p in Model)
+{
+    <p>Parcel No : @counter </p>
+    <p>Name   : @Html.DisplayFor(model => p.Name)</p>
+    <p>Weight : @Html.DisplayFor(model => p.Weight)</p>
+    <p>Type   : @Html.DisplayFor(model => p.Type)</p>
+    <p>Time   : @Html.DisplayFor(model => p.Time)</p>
+    counter = counter + 1;
+    <hr />
+}
+
+@Html.ActionLink("Go Back", "IndividualInfo", "ListCustomers", new { id = ViewBag.id }, null)
+@Html.ActionLink("Back to list", "CustomersList", "ListCustomers")
+
