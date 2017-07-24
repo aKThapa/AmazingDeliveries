@@ -1,0 +1,63 @@
+﻿body {
+    margin-top: 50px;
+}
+
+.navbar-fixed-top {
+    height: 100px;
+}
+
+.navbar-header {
+    float: left;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    float: none;
+    text-align: center;
+    font-size: 200%;
+    color: black;
+}
+
+.navbar-inverse {
+    background-color: rgb(60, 124, 74);
+}
+
+    .navbar-inverse .navbar-brand {
+        color: rgb(0, 0, 0);
+    }
+
+.text-box, single-line {
+    max-width: 100%;
+}
+
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+
+@media only screen and (max-width: 400px) {
+    .navbar-brand {
+        text-align: center;
+        font-size: 150%;
+    }
+}
